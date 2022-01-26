@@ -1,18 +1,39 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <product-card
+      v-for="product of showcase"
+      :key="product.id"
+      :data="product"
+      :target="'showcase'"
+      v-on:productAction="onBuy"
+    ></product-card>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ProductCard from "../components/ProductCard.vue";
 
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
-}
+  components: { ProductCard },
+  name: "Home",
+  computed: {
+    showcase() {
+      return this.$store.getters.getProducts;
+    },
+  },
+  methods: {
+    onBuy(product) {
+      this.$store.dispatch("addToCart", product);
+    },
+  },
+};
 </script>
+
+<style lang="scss">
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+</style>
