@@ -1,15 +1,157 @@
 <template>
   <div>
-    <header>
-      <h2>Vue Shop</h2>
-      <input v-model="query" />
-      <nav>
-        <router-link to="/">Главная</router-link>
-        <router-link to="/cart">Корзина</router-link>
-      </nav>
-    </header>
-    <router-view />
+    <div class="container_main">
+      <div class="container">
+        <div class="header">
+          <div class="header_up">
+            <div class="header_up_left">
+              <div class="header_up__logo">
+                <router-link class="header_logo" to="/"
+                  ><h1 class="navi_bar_super">Главная</h1>
+                  <img class="header_logo__img" :src="`./img/b_logo.png`" />
+                  <p class="bran">BRAN</p>
+                  <span class="d">D</span></router-link
+                >
+              </div>
+              <div class="search">
+                <form action="#">
+                  <details class="browse">
+                    <summary>Browse <i class="fas fa-caret-down"></i></summary>
+                    <div class="browse_menu">
+                      <i class="fa fa-caret-up" aria-hidden="true"></i>
+                      <a href="Product.html" class="browse_menu_header">
+                        women</a
+                      >
+                      <hr class="browse_hr" />
+                      <a href="Single.html" class="browse_menu_item">Dresses</a>
+                      <a href="Single.html" class="browse_menu_item">Tops</a>
+                      <a href="Single.html" class="browse_menu_item"
+                        >Sweaters/Knits</a
+                      >
+                      <a href="Single.html" class="browse_menu_item"
+                        >Jackets/Coats</a
+                      >
+                      <a href="Single.html" class="browse_menu_item">Blazers</a>
+                      <a href="Single.html" class="browse_menu_item">Denim</a>
+                      <a href="Single.html" class="browse_menu_item"
+                        >Leggings/Pants</a
+                      >
+                      <a href="Single.html" class="browse_menu_item"
+                        >Skirts/Shorts</a
+                      >
+                      <a href="Single.html" class="browse_menu_item"
+                        >Accessories</a
+                      >
+                      <a href="Single.html" class="browse_menu_item"
+                        >Bags/Purses</a
+                      >
+                      <a href="Single.html" class="browse_menu_item"
+                        >Swimwear/Underwear</a
+                      >
+                      <a href="Single.html" class="browse_menu_item"
+                        >Nightwear</a
+                      >
+                      <a href="Single.html" class="browse_menu_item"
+                        >Shoes Beauty</a
+                      >
+                      <a href="Product.html" class="browse_menu_header"> men</a>
+                      <hr class="browse_hr" />
+                      <a href="Single.html" class="browse_menu_item"
+                        >Tees/Tank tops</a
+                      >
+                      <a href="Single.html" class="browse_menu_item"
+                        >Shirts/Polos</a
+                      >
+                      <a href="Single.html" class="browse_menu_item"
+                        >Sweaters</a
+                      >
+                      <a href="Single.html" class="browse_menu_item"
+                        >Sweatshirts/Hoodies</a
+                      >
+                      <a href="Single.html" class="browse_menu_item">Blazers</a>
+                      <a href="Single.html" class="browse_menu_item"
+                        >Jackets/vests</a
+                      >
+                    </div>
+                  </details>
+                  <input
+                    class="input"
+                    type="text"
+                    placeholder="Search for Item..."
+                  />
+                  <button class="input__lups" type="submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="header_up_right">
+              <router-link class="nodecor" to="/cart"
+                ><h1 class="navi_bar_super">Корзина</h1>
+              </router-link>
+              <details class="button_cart">
+                <summary>My Account <i class="fas fa-caret-down"></i></summary>
+                <div class="cart_inside">
+                  <a href="Single.html"
+                    ><div class="cart_inside_item_1">
+                      <div>
+                        <img src="img/cart_inside_men.jpg" alt="item" />
+                      </div>
+                      <div>
+                        <p class="unic">Rebox Zane</p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                        <p class="unic_price">1 x $250</p>
+                      </div>
+                      <div>
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                      </div></div
+                  ></a>
+                  <br />
+                  <a href="Single.html"
+                    ><div class="cart_inside_item_1">
+                      <div>
+                        <img src="img/cart_inside_girl.jpg" alt="item" />
+                      </div>
+                      <div>
+                        <p class="unic">Rebox Zane</p>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                        <p class="unic_price">1 x $250</p>
+                      </div>
+                      <div>
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                      </div></div
+                  ></a>
+                  <br />
+
+                  <p class="cart_total">TOTAL $500.00</p>
+                  <button class="cart_button_check">
+                    <a href="Checkout.html" class="cart_button_check_text"
+                      >Checkout</a
+                    >
+                  </button>
+                  <button class="cart_button_add_to">
+                    <a href="ShoppingCart.html" class="cart_button_add_to_text">
+                      Go to cart</a
+                    >
+                  </button>
+                </div>
+              </details>
+            </div>
+          </div>
+          <hr class="header_up_hr" />
+        </div>
+      </div>
+    </div>
   </div>
+  <router-view />
 </template>
 
 <script>
@@ -73,7 +215,7 @@ header {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  min-height: 100vh;
+  //min-height: 100vh;
 }
 
 .container {
@@ -116,6 +258,14 @@ header {
   display: -ms-flexbox;
   display: flex;
   text-decoration: none;
+  height: 48px;
+}
+
+.navi_bar_super {
+  color: red;
+  text-decoration: none;
+  font-size: 34px;
+  align-self: center;
 }
 
 .header_logo__img {
@@ -1004,7 +1154,7 @@ a {
 .add {
   border: 2px solid #ffffff;
   padding: 8px 12px;
-  color: #ffffff;
+  //color: #ffffff;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
@@ -2498,5 +2648,10 @@ button:focus {
 a {
   text-decoration: none;
 }
+
+.nodecor {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */
 </style>
